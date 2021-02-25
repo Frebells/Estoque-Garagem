@@ -1,0 +1,5 @@
+C:\DotNet\Cadastro-estoque\Cadastro.Estoque\obj\Debug\net5.0\Cadastro.Estoque.csprojAssemblyReference.cache
+C:\DotNet\Cadastro-estoque\Cadastro.Estoque\obj\Debug\net5.0\Cadastro.Estoque.GeneratedMSBuildEditorConfig.editorconfig
+C:\DotNet\Cadastro-estoque\Cadastro.Estoque\obj\Debug\net5.0\Cadastro.Estoque.AssemblyInfoInputs.cache
+C:\DotNet\Cadastro-estoque\Cadastro.Estoque\obj\Debug\net5.0\Cadastro.Estoque.AssemblyInfo.cs
+C:\DotNet\Cadastro-estoque\Cadastro.Estoque\obj\Debug\net5.0\Cadastro.Estoque.csproj.CoreCompileInputs.cache
