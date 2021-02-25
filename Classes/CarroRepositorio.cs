@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using CadastroEstoque.Interfaces;
+using CadastroEstoque;
 
 namespace CadastroEstoque
 {

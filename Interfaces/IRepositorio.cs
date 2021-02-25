@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using CadastroEstoque.Interfaces;
+using CadastroEstoque;
 
 
-namespace CadastroEstoque.Interfaces
+namespace CadastroEstoque
 {
     public interface IRepositorio<T>
     {   

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CadastroEstoque
 {
@@ -24,7 +25,7 @@ namespace CadastroEstoque
                     case "3":
                     //AtualizaCarro();
                     break;
-                    
+
                     case "4":
                     //ExcluiCarro();
                     break;
@@ -39,13 +40,12 @@ namespace CadastroEstoque
 
                     default:
                     throw new ArgumentOutOfRangeException();
-
-                    Console.WriteLine("Opcao invalida, tente novamente: ");
-                    OpcaoUsuario = Console.ReadLine();
                 }
 
                 OpcaoUsuario = ReceberOpcaoUsuario();
             }
+            Console.WriteLine("Opcao invalida, tente novamente: ");
+            Console.ReadLine();
         }          
         private static void ListaCarros()
         {
@@ -57,6 +57,7 @@ namespace CadastroEstoque
             if (lista.Count == 0)
             {
                 Console.WriteLine("Nenhum carro em estoque!");
+                return;
             }
             foreach (var Carro in lista)
             {
