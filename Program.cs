@@ -18,7 +18,7 @@ namespace CadastroEstoque
                     break;
                     
                     case "2":
-                    //InsereCarro();
+                    InsereCarro();
                     break;
 
                     case "3":
@@ -54,10 +54,16 @@ namespace CadastroEstoque
             {
                 Console.WriteLine("Nenhum carro em estoque!");
             }
-            foreach (var CRUDItens in lista)
+            foreach (var Carro in lista)
             {
-                Console.WriteLine("#ID {0}: - {1}", Estoque.List(), Estoque.RetornaId());                  
+                Console.WriteLine("#ID {0}: - {1}", Carro.retornaId(), Carro.retornaMarca());                  
             }
+        }
+
+        private static void InsereCarro()
+        {
+            Console.WriteLine("Adicionando Carro em estoque");
+            
         }
     
         private static string RecberOpcaoUsuario()
@@ -65,7 +71,6 @@ namespace CadastroEstoque
             Console.WriteLine();
             Console.WriteLine("Estoque de Carros");
             Console.WriteLine("Selecione a opcao desejada:");
-
             Console.WriteLine("1 - Checar veiculos em estoque");
             Console.WriteLine("2 - Adicionar carro ao estoque");
             Console.WriteLine("3 - Atualizar veiculo em estoque");

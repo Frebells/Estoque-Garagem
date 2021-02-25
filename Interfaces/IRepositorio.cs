@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using CadastroEstoque.Interfaces;
+
 
 namespace CadastroEstoque.Interfaces
 {
