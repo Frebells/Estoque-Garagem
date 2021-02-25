@@ -52,7 +52,7 @@ namespace CadastroEstoque
             Console.WriteLine("Em Estoque:");
             Console.WriteLine();
 
-            var lista = Estoque.List();    
+            var lista = Estoque.Lista();    
 
             if (lista.Count == 0)
             {
