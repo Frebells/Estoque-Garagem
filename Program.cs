@@ -63,6 +63,22 @@ namespace CadastroEstoque
         private static void InsereCarro()
         {
             Console.WriteLine("Adicionando Carro em estoque");
+            foreach (int i in Enum.GetValues(typeof(Marca)))
+            {
+                Console.WriteLine("{0}: -{1}", i, Enum.GetName(typeof(Marca), i));
+            }
+            Console.WriteLine("Seleione a marca conforme as opcoes acima: ");
+            int entradaMarca = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("Insira o modelo do carro: ");
+            string entradaModelo = Console.ReadLine();
+
+            Console.WriteLine("Insira a cor do carro: ");
+            string entradaCor = Console.ReadLine();
+
+            Console.WriteLine("Insira o ano do carro: ");
+            int entradaAno = int.Parse(Console.ReadLine());
+
             
         }
     
