@@ -23,14 +23,15 @@ namespace CadastroEstoque
 
                     case "3":
                     //AtualizaCarro();
-
+                    break;
+                    
                     case "4":
                     //ExcluiCarro();
                     break;
 
                     case "5":
                     //VizualizaCarro();
-                    break:
+                    break;
 
                     case "6":
                     Console.Clear();
