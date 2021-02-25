@@ -18,9 +18,9 @@ namespace CadastroEstoque
 
         public void Insere(CRUDItens objeto)
         {
-            listacarro.Add(objeto)
+            listacarro.Add(objeto);
         }
-        
+
         public List<CRUDItens> List()
         {
             return listacarro;

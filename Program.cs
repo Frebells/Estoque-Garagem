@@ -48,18 +48,15 @@ namespace CadastroEstoque
             Console.WriteLine("Em Estoque:");
             Console.WriteLine();
 
-            var lista = Estoque.List();
+            var lista = Estoque.List();    
 
             if (lista.Count == 0)
             {
                 Console.WriteLine("Nenhum carro em estoque!");
             }
-            foreach (var CarroRepositorio in lista)
+            foreach (var CRUDItens in lista)
             {
-                Console.WriteLine("#ID {0}: - {1}", Estoque.RetornaId(), Estoque.List());
-                
-                    
-                 
+                Console.WriteLine("#ID {0}: - {1}", Estoque.List(), Estoque.RetornaId());                  
             }
         }
     
