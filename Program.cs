@@ -7,7 +7,7 @@ namespace CadastroEstoque
         static CarroRepositorio Estoque = new CarroRepositorio();
         static void Main(string[] args)
         {
-            string OpcaoUsuario = RecberOpcaoUsuario();
+            string OpcaoUsuario = ReceberOpcaoUsuario();
 
             while (OpcaoUsuario.ToUpper() != "X")
             {
@@ -38,9 +38,12 @@ namespace CadastroEstoque
 
                     default:
                     throw new ArgumentOutOfRangeException();
+
+                    Console.WriteLine("Opcao invalida, tente novamente: ");
+                    OpcaoUsuario = Console.ReadLine();
                 }
 
-                OpcaoUsuario = RecberOpcaoUsuario();
+                OpcaoUsuario = ReceberOpcaoUsuario();
             }
         }          
         private static void ListaCarros()
@@ -78,11 +81,9 @@ namespace CadastroEstoque
 
             Console.WriteLine("Insira o ano do carro: ");
             int entradaAno = int.Parse(Console.ReadLine());
-
-            
         }
     
-        private static string RecberOpcaoUsuario()
+        private static string ReceberOpcaoUsuario()
         {
             Console.WriteLine();
             Console.WriteLine("Estoque de Carros");

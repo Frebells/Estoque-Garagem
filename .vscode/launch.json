@@ -18,8 +18,7 @@
             "cwd": "${workspaceFolder}",
             "OS-COMMENT5": "For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console",
             "console": "internalConsole",
-            "stopAtEntry": false,
-            "internalConsoleOptions": "openSessionsStart"
+            "stopAtEntry": false
         },
         {
             "name": ".NET Core Attach",
@@ -28,4 +27,4 @@
             "processId": "${command:pickProcess}"
         }
     ]
-} 
+}
