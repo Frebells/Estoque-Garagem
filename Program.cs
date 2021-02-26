@@ -61,7 +61,7 @@ namespace CadastroEstoque
             foreach (int i in Enum.GetValues(typeof(Marca)))
             {
                 Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Marca), i));
-
+            }
                 Console.WriteLine("Escolha a marca do carro: ");
                 int entradaMarca = int.Parse(Console.ReadLine());
 
@@ -80,8 +80,6 @@ namespace CadastroEstoque
                                                         cor: entradaCor,
                                                         ano: entradaAno);
                 EstoqueCarros.Insere(NovoRegistro);
-            }
-
         }
         private static string ObterOpcaoUser()
         {
