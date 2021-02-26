@@ -4,107 +4,35 @@ namespace CadastroEstoque
 {
     class Program
     {
-        static CarroRepositorio Estoque = new CarroRepositorio();
         static void Main(string[] args)
         {
-            string OpcaoUsuario = ReceberOpcaoUsuario();
-
-            while (OpcaoUsuario.ToUpper() != "X")
+            string OpcapUser = ObterOpcaoUser();
+            while (OpcapUser != "0")
             {
-                switch (OpcaoUsuario)
+                switch(OpcapUser)
                 {
-                    case "1":
-                    ListaDeCarros();
-                    break;
                     
-                    case "2":
-                    InsereCarro();
-                    break;
-
-                    case "3":
-                    //AtualizaCarro();
-                    break;
-
-                    case "4":
-                    //ExcluiCarro();
-                    break;
-
-                    case "5":
-                    //VizualizaCarro();
-                    break;
-
-                    case "6":
-                    Console.Clear();
-                    break;
-
-                    default:
-                    throw new ArgumentOutOfRangeException();
                 }
-
-                OpcaoUsuario = ReceberOpcaoUsuario();
-            
-            Console.WriteLine("Opcao invalida, tente novamente: ");
-            Console.ReadLine();
-            }      
-            private static void ListaDeCarros() 
-            {
-            Console.WriteLine("Em Estoque:");
-            Console.WriteLine();
-
-            var lista = Estoque.Lista();    
-
-            if (lista.Count == 0)
-            {
-                Console.WriteLine("Nenhum carro em estoque!");
-                return;
-            }
-            foreach (var Carro in lista)
-            {
-                Console.WriteLine("#ID {0}: - {1}", Carro.retornaId(), Carro.retornaMarca());                  
             }
         }
-        private static void InsereCarro()
-        {
-            Console.WriteLine("Inserir novo carro");
-            Console.WriteLine("Adicionando Carro em estoque");
-            foreach (int i in Enum.GetValues(typeof(Marca)))
-            {
-                Console.WriteLine("{0}: -{1}", i, Enum.GetName(typeof(Marca), i));
-            
-            Console.WriteLine("Seleione a marca conforme as opcoes acima: ");
-            int entradaMarca = int.Parse(Console.ReadLine());
-            
-            Console.WriteLine("Insira o modelo do carro: ");
-            string entradaModelo = Console.ReadLine();
 
-            Console.WriteLine("Insira a cor do carro: ");
-            string entradaCor = Console.ReadLine();
-
-            Console.WriteLine("Insira o ano do carro: ");
-            int entradaAno = int.Parse(Console.ReadLine());
-
-            CRUDItens NovoCarro = new CRUDItens(id: Estoque.ProximoId(),
-
-            }
-        }
-    
-        private static string ReceberOpcaoUsuario()
+        private static string ObterOpcaoUser()
         {
             Console.WriteLine();
-            Console.WriteLine("Estoque de Carros");
-            Console.WriteLine("Selecione a opcao desejada:");
-            Console.WriteLine("1 - Checar veiculos em estoque");
-            Console.WriteLine("2 - Adicionar carro ao estoque");
-            Console.WriteLine("3 - Atualizar veiculo em estoque");
-            Console.WriteLine("4 - Excluir carro do estoque");
-            Console.WriteLine("5 - Informacoes sobre o carro");
+            Console.WriteLine("ESTOQUE DE CARROS");
+            Console.WriteLine();
+            Console.WriteLine("Escolha a opcao desejada");
+            Console.WriteLine("1 - Carros em estoque");
+            Console.WriteLine("2 - Inserir um novo carro");
+            Console.WriteLine("3 - Atualizar um carro do estoque");
+            Console.WriteLine("4 - Excluir um carro do estoque");
+            Console.WriteLine("5 - Exibir detalhes do carro");
             Console.WriteLine("6 - Limpar a busca");
-            Console.WriteLine("0 - Sair do estoque");
+            Console.WriteLine("0 - Sair");
+
+            string OpcaoUser = Console.ReadLine().ToUpper();
             Console.WriteLine();
-            
-            string OpcaoUsuario = Console.ReadLine().ToUpper();
-            Console.WriteLine();
-            return OpcaoUsuario;
+            return OpcaoUser;
         }
     }
 }
