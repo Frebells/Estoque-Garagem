@@ -36,7 +36,8 @@ namespace CadastroEstoque
             retorno += "Marca: " + this.Marca + Environment.NewLine;
             retorno += "Modelo: " + this.Cor + Environment.NewLine;
             retorno += "Cor: " + this.Modelo + Environment.NewLine;
-            retorno += "Ano:" + this.Ano;
+            retorno += "Ano:" + this.Ano + Environment.NewLine;
+            retorno += "Excluido" + this.EmEstoque;
             return retorno;
         }
 

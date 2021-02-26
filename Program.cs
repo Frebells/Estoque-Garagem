@@ -19,10 +19,10 @@ namespace CadastroEstoque
                         InserirCarro();
                         break;
                     case "3":
-                        //AttCarro();
+                        AttCarro();
                         break;
                     case "4":
-                        //ExcluiCarro();
+                        ExcluiCarro();
                         break;
                     case "5":
                         //ExibirCarro();
@@ -80,6 +80,38 @@ namespace CadastroEstoque
                                                         cor: entradaCor,
                                                         ano: entradaAno);
                 EstoqueCarros.Insere(NovoRegistro);
+        }
+        private static void  AttCarro()
+        {
+            Console.WriteLine("Insira o id do carro: ");
+            int IndiceEstoque = int.Parse(Console.ReadLine());
+
+            foreach (int i in Enum.GetValues(typeof(Marca)))
+            {
+                Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Marca), i));
+            }
+            Console.WriteLine("Escolha a marca do carro: ");
+                int entradaMarca = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Informe o modelo do carro: ");
+                string entradaModelo = Console.ReadLine();
+
+                Console.WriteLine("Informe a cor do carro: ");
+                string entradaCor = Console.ReadLine();
+
+                Console.WriteLine("Informe o ano do carro");
+                int entradaAno = int.Parse(Console.ReadLine());
+
+                CRUDItens attCarro = new CRUDItens(id: IndiceEstoque,
+                                                        marca: (Marca)entradaMarca,
+                                                        modelo: entradaModelo,
+                                                        cor: entradaCor,
+                                                        ano: entradaAno);
+                EstoqueCarros.Atualiza(IndiceEstoque, attCarro);
+        }
+        private static void ExcluiCarro()
+        {
+
         }
         private static string ObterOpcaoUser()
         {
