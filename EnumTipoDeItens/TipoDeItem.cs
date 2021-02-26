@@ -6,7 +6,6 @@ namespace CadastroEstoque
         Chevrolet = 1,
         Renault = 2,
         Ford = 3,
-
         Wolkswagen = 4, 
         Pegout = 5
     }
