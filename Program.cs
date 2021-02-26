@@ -63,7 +63,7 @@ namespace CadastroEstoque
                 Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Marca), i));
 
                 Console.WriteLine("Escolha a marca do carro: ");
-                int EntradaMarca = int.Parse(Console.ReadLine());
+                int entradaMarca = int.Parse(Console.ReadLine());
 
                 Console.WriteLine("Informe o modelo do carro: ");
                 string entradaModelo = Console.ReadLine();
@@ -75,7 +75,7 @@ namespace CadastroEstoque
                 int entradaAno = int.Parse(Console.ReadLine());
 
                 CRUDItens NovoRegistro = new CRUDItens(id: EstoqueCarros.ProximoId(),
-                                                        marca: (Marca)EntradaMarca,
+                                                        marca: (Marca)entradaMarca,
                                                         modelo: entradaModelo,
                                                         cor: entradaCor,
                                                         ano: entradaAno);
