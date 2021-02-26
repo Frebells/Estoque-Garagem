@@ -25,7 +25,7 @@ namespace CadastroEstoque
                         ExcluiCarro();
                         break;
                     case "5":
-                        //ExibirCarro();
+                        ExibirCarro();
                         break;
                     case "6":
                         Console.Clear();
@@ -111,7 +111,19 @@ namespace CadastroEstoque
         }
         private static void ExcluiCarro()
         {
+            Console.WriteLine("Insira o Id do carro a ser excluido: ");
+            int IndiceEstoque = int.Parse(Console.ReadLine());
 
+            EstoqueCarros.Excluir(IndiceEstoque);
+        }
+        private static void ExibirCarro()
+        {
+            Console.WriteLine("Digite o id do carro: ");
+            int IndiceEstoque = int.Parse(Console.ReadLine());
+
+            var CarroEmEstoque = EstoqueCarros.RetornaId(IndiceEstoque); 
+
+            Console.WriteLine(CarroEmEstoque);
         }
         private static string ObterOpcaoUser()
         {
