@@ -30,11 +30,6 @@ namespace CadastroEstoque
             this.Ano = ano;
             this.EmEstoque = false;
         }
-
-        public CRUDItens()
-        {
-        }
-
         public override string ToString()
         {
             string retorno = "";
@@ -45,7 +40,7 @@ namespace CadastroEstoque
             return retorno;
         }
 
-        public string retornaMarca()
+        public string retornaModelo()
         {
             return this.Modelo;
         }
