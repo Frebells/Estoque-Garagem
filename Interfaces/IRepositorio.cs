@@ -8,7 +8,7 @@ namespace CadastroEstoque.Interfaces
         List<T> Lista();
         T RetornaId(int id);
         void Insere(T entidade);
-        void Exclui(int id);
+        void Excluir(int id);
         void Atualiza(int id, T entidade);
         int ProximoId();
     }

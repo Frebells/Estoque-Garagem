@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System; 
 
 namespace CadastroEstoque
 {
@@ -15,7 +14,7 @@ namespace CadastroEstoque
                 switch (OpcaoUsuario)
                 {
                     case "1":
-                    ListaCarros();
+                    ListaDeCarros();
                     break;
                     
                     case "2":
@@ -43,12 +42,12 @@ namespace CadastroEstoque
                 }
 
                 OpcaoUsuario = ReceberOpcaoUsuario();
-            }
+            
             Console.WriteLine("Opcao invalida, tente novamente: ");
             Console.ReadLine();
-        }          
-        private static void ListaCarros()
-        {
+            }      
+            private static void ListaDeCarros() 
+            {
             Console.WriteLine("Em Estoque:");
             Console.WriteLine();
 
@@ -64,14 +63,14 @@ namespace CadastroEstoque
                 Console.WriteLine("#ID {0}: - {1}", Carro.retornaId(), Carro.retornaMarca());                  
             }
         }
-
         private static void InsereCarro()
         {
+            Console.WriteLine("Inserir novo carro");
             Console.WriteLine("Adicionando Carro em estoque");
             foreach (int i in Enum.GetValues(typeof(Marca)))
             {
                 Console.WriteLine("{0}: -{1}", i, Enum.GetName(typeof(Marca), i));
-            }
+            
             Console.WriteLine("Seleione a marca conforme as opcoes acima: ");
             int entradaMarca = int.Parse(Console.ReadLine());
             
@@ -83,6 +82,10 @@ namespace CadastroEstoque
 
             Console.WriteLine("Insira o ano do carro: ");
             int entradaAno = int.Parse(Console.ReadLine());
+
+            CRUDItens NovoCarro = new CRUDItens(id: Estoque.ProximoId(),
+
+            }
         }
     
         private static string ReceberOpcaoUsuario()
